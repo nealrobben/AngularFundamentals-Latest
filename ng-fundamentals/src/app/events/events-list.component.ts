@@ -14,6 +14,9 @@ import { Component } from '@angular/core';
     <div>`
 })
 export class EventsListComponent{
+
+  constructor(){}
+
     events = [
         {
           id: 1,
