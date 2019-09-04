@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 @Component({
     selector: 'simple-modal',
     template: `
-        <div id="simple-modal" class="modal fade" tabindex="-1">
+        <div id="{{elementId}}" class="modal fade" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -25,4 +25,5 @@ import { Title } from '@angular/platform-browser';
 export class SimpleModalComponent{
 
     @Input() Title:string;
+    @Input() elementId:string;
 }
