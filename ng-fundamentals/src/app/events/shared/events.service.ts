@@ -28,11 +28,6 @@ export class EventService{
       return this.http.post<IEvent>("api/events",event,options).pipe(catchError(this.handleError<IEvent>('saveEvent')));
     }
 
-    updateEvent(event){
-      let index = EVENTS.findIndex(x => x.id = event.id);
-      EVENTS[index] = event
-    }
-
     searchSessions(searchTerm:string){
       var term = searchTerm.toLocaleLowerCase();
       var results:ISession[] = [];
