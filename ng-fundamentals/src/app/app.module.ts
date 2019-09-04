@@ -6,6 +6,7 @@ import { NavBarComponent } from './nav/navbar.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { Error404Component } from './errors/404.component';
+import { TOASTR_TOKEN, Toastr } from './common/toastr.service';
 
 import {
   EventsListComponent,
@@ -19,6 +20,8 @@ import {
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollapsibleWellComponent } from './common/collapsible-well.component';
+
+declare let toastr:Toastr;
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { CollapsibleWellComponent } from './common/collapsible-well.component';
   providers: [{
     provide: 'canDeactivateCreateEvent',
     useValue: checkDirtyState
+  },
+  {
+    provide: TOASTR_TOKEN, useValue: toastr
   }],
   bootstrap: [EventsAppComponent]
 })
