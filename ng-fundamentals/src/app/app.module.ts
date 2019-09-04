@@ -22,6 +22,8 @@ import {
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JQ_TOKEN, TOASTR_TOKEN, Toastr, CollapsibleWellComponent, SimpleModalComponent, ModalTriggerDirective} from './common/index';
 
+import { HttpClientModule } from '@angular/common/http'
+
 let toastr:Toastr = window['toastr'];
 let jQuery = window['$'];
 
@@ -45,7 +47,8 @@ let jQuery = window['$'];
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [{
     provide: 'canDeactivateCreateEvent',
