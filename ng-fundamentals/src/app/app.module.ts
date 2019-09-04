@@ -15,7 +15,8 @@ import {
   EventRouteActivator,
   CreateSessionComponent,
   SessionListComponent,
-  UpvoteComponent
+  UpvoteComponent,
+  LocationValidator
 } from './events/index'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,7 +38,8 @@ let jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     SimpleModalComponent,
-    UpvoteComponent
+    UpvoteComponent,
+    LocationValidator
   ],
   imports: [
     BrowserModule,
