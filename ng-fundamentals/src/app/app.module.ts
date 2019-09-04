@@ -12,11 +12,11 @@ import {
   EventThumbnailComponent,
   EventDetailsComponent,
   CreateEventComponent,
-  EventRouteActivator,
   CreateSessionComponent,
   SessionListComponent,
   UpvoteComponent,
-  LocationValidator
+  LocationValidator,
+  EventResolver
 } from './events/index'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -59,7 +59,8 @@ let jQuery = window['$'];
   },
   {
     provide: JQ_TOKEN, useValue: jQuery
-  }],
+  },
+  EventResolver],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
