@@ -1,0 +1,7 @@
+
+npm start
+
+npm run server
+
+username: johnpapa
+password: any value will log in
